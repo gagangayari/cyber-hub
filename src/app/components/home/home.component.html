@@ -1,0 +1,63 @@
+<mat-toolbar class="theme-color">
+    <img src="assets/Cyber Hub-logos/Cyber Hub-logos.jpeg" alt="">
+    <h2>C</h2>
+    <h2>Y</h2>
+    <h2>B</h2>
+    <h2>E</h2>
+    <h2>R</h2>
+    <h2>_</h2>
+    <h2>H</h2>
+    <h2>U</h2>
+    <h2>B</h2>
+    <span class="spacer"></span>
+    <div> Services</div>
+    <div>Blog</div>
+    <button mat-raised-button>
+        <mat-icon>account_circle</mat-icon>
+    </button>
+
+</mat-toolbar>
+
+<div class="body-page">
+    <!-- <ngb-carousel></ngb-carousel> -->
+    <img id='main-img' src="assets/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpeg" alt="" height="400px" width="900px">
+    
+    <!-- Services -->
+    <!-- <span>Services</span> -->
+    <div class="services theme-color">
+        <!-- <mat-list *ngFor="let item of items; let i=index">
+            <mat-list-item><strong>{{i}} )</strong>&nbsp;{{item}}</mat-list-item>
+        </mat-list> -->
+        <mat-card *ngFor="let item of items" class="service-card">
+            <mat-card-title>
+                <mat-icon>{{item.logo}}</mat-icon>{{item.name}}
+            </mat-card-title>
+            <mat-card-content>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aperiam quia unde doloremque laudantium odit aliquid ducimus saepe. Illum mollitia suscipit dolore. Numquam, ea repellat illum similique sapiente ullam id!
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+    <!-- staff -->
+    <!-- <span class="theme-color">STAFF</span> -->
+    <div class="staff">
+        <mat-card *ngFor="let staff of staffs">
+            <mat-card-header>
+                <mat-card-title>
+                    {{staff.name}}
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{staff.imgUrl}}" alt="">
+            <mat-card-content>
+                <p>{{staff.about}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a href="{{staff.profile}}">Check Profile</a>
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+    
+   
+    
+</div>

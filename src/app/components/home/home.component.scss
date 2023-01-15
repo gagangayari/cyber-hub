@@ -1,0 +1,84 @@
+.spacer{
+    flex: 1 1 auto;
+}
+
+.theme-color{
+    background-color: #E3F6FF;
+}
+
+mat-toolbar{
+    display: flex;
+    justify-content: center;
+    div {
+        padding: 6px;
+    }
+
+    img{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+img{
+    display: block;
+}
+
+.staff{
+    display: flex;
+
+    mat-card{
+        margin-right: 5px;
+        cursor: pointer;
+
+        // max-width: 200px;
+    }
+}
+
+
+mat-list-item{
+    height: 16px !important;
+}
+
+h2{
+    margin-left: 5px;
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: 900;
+}
+
+:host ::ng-deep .mat-card-image{
+    height: 100px;
+    width: 200px;
+}
+
+.services{
+    margin: 10px 0;
+    padding: 10px 0;
+    display: flex;
+
+    mat-card{
+        width: 800px;
+        margin-right: 5px;
+        mat-icon{
+            padding: 5px;
+        }
+    }
+
+
+}
+
+#main-img{
+    margin-left: 10vw;
+}
+
+.staff{
+    padding: 5px;
+}
+
+h2:hover{
+    font-size: 50px;
+}
+
+mat-card:hover{
+    color:#8DCBE6
+}
