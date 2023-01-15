@@ -1,10 +1,9 @@
+@import 'src/app/app.component.scss';
+
 .spacer{
     flex: 1 1 auto;
 }
 
-.theme-color{
-    background-color: #E3F6FF;
-}
 
 mat-toolbar{
     display: flex;
@@ -28,7 +27,7 @@ img{
 
     mat-card{
         margin-right: 5px;
-        cursor: pointer;
+        // cursor: pointer;
 
         // max-width: 200px;
     }
@@ -41,7 +40,7 @@ mat-list-item{
 
 h2{
     margin-left: 5px;
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: larger;
     font-weight: 900;
 }
@@ -57,10 +56,11 @@ h2{
     display: flex;
 
     mat-card{
-        width: 800px;
+        max-width: 800px;
         margin-right: 5px;
         mat-icon{
-            padding: 5px;
+            padding: 3px;
+            display: inline-block;
         }
     }
 
@@ -73,12 +73,23 @@ h2{
 
 .staff{
     padding: 5px;
+    mat-card{
+        max-width: 300px;
+    }
+
+    mat-card-actions{
+        margin-left: 85%;
+    }
 }
 
 h2:hover{
     font-size: 50px;
 }
 
-mat-card:hover{
-    color:#8DCBE6
+// mat-card:hover{
+//     color:#8DCBE6
+// }
+
+.picsum-img-wrapper{
+    margin-left: 20vw;
 }

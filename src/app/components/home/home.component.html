@@ -12,25 +12,27 @@
     <span class="spacer"></span>
     <div> Services</div>
     <div>Blog</div>
-    <button mat-raised-button>
+    <button mat-raised-button (click)="contact()">
         <mat-icon>account_circle</mat-icon>
     </button>
 
 </mat-toolbar>
 
 <div class="body-page">
-    <!-- <ngb-carousel></ngb-carousel> -->
-    <img id='main-img' src="assets/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpeg" alt="" height="400px" width="900px">
+    <ngb-carousel [interval]="2000">
+        <ng-template ngbSlide *ngFor="let image of homeImages" class="">
+            <div class="picsum-img-wrapper">
+                <img [src]="image" alt="Random first slide" height="400px" width="700px">
+            </div>
+        </ng-template>
+      </ngb-carousel>
+      
     
     <!-- Services -->
-    <!-- <span>Services</span> -->
     <div class="services theme-color">
-        <!-- <mat-list *ngFor="let item of items; let i=index">
-            <mat-list-item><strong>{{i}} )</strong>&nbsp;{{item}}</mat-list-item>
-        </mat-list> -->
         <mat-card *ngFor="let item of items" class="service-card">
             <mat-card-title>
-                <mat-icon>{{item.logo}}</mat-icon>{{item.name}}
+                <mat-icon>{{item.logo}}</mat-icon>&nbsp;&nbsp;{{item.name}}
             </mat-card-title>
             <mat-card-content>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aperiam quia unde doloremque laudantium odit aliquid ducimus saepe. Illum mollitia suscipit dolore. Numquam, ea repellat illum similique sapiente ullam id!
@@ -38,8 +40,22 @@
         </mat-card>
 
     </div>
+<!-- 
+    <ngb-carousel >
+        <ng-template ngbSlide class="services theme-color">
+            <mat-card *ngFor="let item of items" class="service-card">
+                <mat-card-title>
+                    <mat-icon>{{item.logo}}</mat-icon>&nbsp;&nbsp;{{item.name}}
+                </mat-card-title>
+                <mat-card-content>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum aperiam quia unde doloremque laudantium odit aliquid ducimus saepe. Illum mollitia suscipit dolore. Numquam, ea repellat illum similique sapiente ullam id!
+                </mat-card-content>
+            </mat-card>
+        </ng-template>
+    </ngb-carousel> -->
     <!-- staff -->
     <!-- <span class="theme-color">STAFF</span> -->
+    <app-latest></app-latest>
     <div class="staff">
         <mat-card *ngFor="let staff of staffs">
             <mat-card-header>
@@ -49,10 +65,10 @@
             </mat-card-header>
             <img mat-card-image src="{{staff.imgUrl}}" alt="">
             <mat-card-content>
-                <p>{{staff.about}}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nemo cumque placeat facilis quidem ipsum ab, sapiente porro accusamus, inventore rem impedit sequi perspiciatis eaque quam deleniti delectus unde ipsa!</p>
             </mat-card-content>
             <mat-card-actions>
-                <a href="{{staff.profile}}">Check Profile</a>
+                <a href="{{staff.profile}}"> <mat-icon>facebook</mat-icon></a>
             </mat-card-actions>
         </mat-card>
 
